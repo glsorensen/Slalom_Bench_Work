@@ -12,10 +12,17 @@ const cars = carMakers[0];
 const myCar = carMakers.pop();
 
 // Preven incompatable values
-carMakers.push(100);
+carMakers.push('volvo');
 
 // Help with 'map'
 
 carMakers.map((cars: string): string => {
   return cars.toUpperCase();
 });
+
+// Flexible Types
+// const importantDates = [new Date(), '2030-10-10'];
+const importantDates: (string | Date)[] = [new Date()];
+importantDates.push('2030-12-12');
+importantDates.push(new Date());
+
